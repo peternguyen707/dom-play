@@ -1,0 +1,17 @@
+body{
+    font-family: Arial;
+    padding: 20px;
+    background-color: whitesmoke;
+}
+
+#play{
+    border-left: 5px solid rgb(0, 225, 255);
+    padding-top: 0.5px;
+    padding-bottom: 0.5px;
+    padding-left: 10px;
+    padding-right: 10px;     
+}
+
+.header1{
+    font-family: "Lucida Handwriting", cursive;
+}

@@ -1,1 +1,52 @@
-<h1>DOM play</h1>
+<html>
+<head>
+    <link href="style.css" rel="stylesheet" type="text/css">
+<style>
+</style>
+</head>
+<body>
+    <h1 class="header1">DOM Play</h1>
+    <div id="play">
+        <p><span data-actor="odin">Odin: Thou shall be struck with the might of a million bolts!</span></p>
+        <p><span data-actor="alice">Alice: Oh no, here he goes again...</span></p>
+        <p><span data-actor="brynhildr">Brynhildr: Reminds me of the time when--</span></p>
+        <p><span data-actor="odin">Odin: BACK, FIEND! Or taste the might of my sword hand!</span></p>
+        <p><span data-actor="brynhildr">Brynhildr: You know what? Never mind. Alice, I'll meet you back outside.</span></p>
+        <p><span data-actor="lance">Lance: I guess... I'll keep an eye on him.</span></p>
+    </div>
+    <script>  
+
+
+        //we're using the descendant selector to access the spans
+        const spans = document.querySelectorAll('div#play span');
+
+        console.log(spans);
+
+        for (const mySpan of spans){
+            mySpan.addEventListener("click", function(ev){
+                //alert(mySpan.dataset.actor);   
+                highlightActor(mySpan.dataset.actor);
+
+            });     
+        }
+
+
+
+
+        function highlightActor(myActor){
+
+            for(const mySpan of spans){
+
+                if(myActor == mySpan.dataset.actor){
+                    mySpan.style.backgroundColor = 'yellow';
+                }else{
+                    mySpan.style.backgroundColor = 'white';
+                }
+            }
+
+        }      
+        
+    </script>
+</body>
+
+</html> 
